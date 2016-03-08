@@ -20,9 +20,12 @@
     [[SEGAnalytics sharedAnalytics] track:@"Hello World"];
     [[SEGAnalytics sharedAnalytics] group:@"segment"];
     [[SEGAnalytics sharedAnalytics] screen:@"home"];
-    [[SEGAnalytics sharedAnalytics] identify:@"prateek"];
+    NSMutableDictionary *dictionary = [NSMutableDictionary dictionary];
+    [dictionary setObject:[NSNull null] forKey:@"nullTest"];
+    [[SEGAnalytics sharedAnalytics] identify:@"f2prateek@gmail.com" traits:dictionary];
     [[SEGAnalytics sharedAnalytics] alias:@"f2prateek"];
     [[SEGAnalytics sharedAnalytics] flush];
+    
 
     // Override point for customization after application launch.
     return YES;
