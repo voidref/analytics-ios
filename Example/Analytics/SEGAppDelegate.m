@@ -8,12 +8,17 @@
 
 #import "SEGAppDelegate.h"
 #import <Analytics/SEGAnalytics.h>
+#import <SEGGoogleAnalyticsIntegrationFactory.h>
+#import <SEGAmplitudeIntegrationFactory.h>
 
 @implementation SEGAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [SEGAnalytics setupWithConfiguration:[SEGAnalyticsConfiguration configurationWithWriteKey:@"MlTmISmburwl2nN9o3NFpGfElujcfb0q"]];
+    SEGAnalyticsConfiguration *config =  [SEGAnalyticsConfiguration configurationWithWriteKey:@"MlTmISmburwl2nN9o3NFpGfElujcfb0q"];
+    [config use:[SEGGoogleAnalyticsIntegrationFactory instance]];
+    [config use:[SEGAmplitudeIntegrationFactory instance]];
+    [SEGAnalytics setupWithConfiguration:config];
     [SEGAnalytics debug:YES];
 
     [[SEGAnalytics sharedAnalytics] track:@"Hello World"];
