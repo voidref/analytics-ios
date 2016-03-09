@@ -1,11 +1,23 @@
 PODS:
+  - Amplitude-iOS (3.5.0)
   - Analytics (3.0.7)
   - Expecta (1.0.3)
+  - GoogleAnalytics (3.14.0)
+  - GoogleIDFASupport (3.14.0)
+  - Segment-Amplitude (1.1.1):
+    - Amplitude-iOS (~> 3.5.0)
+    - Analytics (~> 3.0.6)
+  - Segment-GoogleAnalytics (1.0.1):
+    - Analytics (~> 3.0.0)
+    - GoogleAnalytics (~> 3.14)
+    - GoogleIDFASupport (~> 3.14)
   - Specta (1.0.4)
 
 DEPENDENCIES:
   - Analytics (from `../`)
   - Expecta
+  - Segment-Amplitude
+  - Segment-GoogleAnalytics
   - Specta
 
 EXTERNAL SOURCES:
@@ -13,8 +25,13 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
+  Amplitude-iOS: 06d4f103728b15e95487b77a16749ae373f970a3
   Analytics: b342fb4f43fa4f97ca6f4358b44d3295217ba294
   Expecta: 9d1bff6c8b0eeee73a166a2ee898892478927a15
+  GoogleAnalytics: 9be1afdb8deeac4bb5f13ca7f7d3b9db2a1f43dc
+  GoogleIDFASupport: aaf8c10bd429abb1c15349d5252244f5eda8ead1
+  Segment-Amplitude: 23a214370aae6fa70732623ebf6a3afaa39526bb
+  Segment-GoogleAnalytics: ffea73c99196720b28b58ea93bcc0e6d11f172e1
   Specta: 69bb134672aae190a1379ff91df07dad8dd1f869
 
 COCOAPODS: 0.39.0

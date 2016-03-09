@@ -9,7 +9,6 @@
 #import "SEGAppDelegate.h"
 #import <Analytics/SEGAnalytics.h>
 
-
 @implementation SEGAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
