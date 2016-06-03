@@ -418,7 +418,7 @@ static BOOL GetAdTrackingEnabled()
         [self.queue addObjectsFromArray:payloadArray];
         [[self.queue copy] writeToURL:[self queueURL] atomically:YES];
         [self flushQueueByLength];
-        
+
     }
     @catch (NSException *exception) {
         SEGLog(@"%@ Error writing payload: %@", self, exception);
@@ -636,7 +636,7 @@ static BOOL GetAdTrackingEnabled()
     [[NSUserDefaults standardUserDefaults] removeObjectForKey:SEGTraitsKey];
     SEGLog(@"[[NSUserDefaults standardUserDefaults] removeObjectForKey: %@]", SEGTraitsKey);
     // add old Traits to any existing traits
-    [self addTraits: oldTraits];
+    [self addTraits:oldTraits];
     SEGLog(@"[self addTraits: %@]", oldTraits);
 }
 
@@ -645,7 +645,7 @@ static BOOL GetAdTrackingEnabled()
     return [[NSUserDefaults standardUserDefaults] arrayForKey:SEGQueueKey];
 }
 
--(NSDictionary *)NSUserDefaultTraits
+- (NSDictionary *)NSUserDefaultTraits
 {
     return [[NSUserDefaults standardUserDefaults] objectForKey:SEGTraitsKey];
 }
