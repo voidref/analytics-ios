@@ -55,6 +55,11 @@ extern NSString *SEGAnalyticsIntegrationDidStart;
 
 
 /**
+ * Whether the analytics client should automatically track in-app purchases from the App Store.
+ */
+@property (nonatomic, assign) BOOL trackInAppPurchases;
+
+/**
  * Register a factory that can be used to create an integration.
  */
 - (void)use:(id<SEGIntegrationFactory>)factory;
